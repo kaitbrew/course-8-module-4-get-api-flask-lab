@@ -12,7 +12,7 @@ def home():
 # TODO: Implement GET /products route that returns all products or filters by category
 
 @app.route("/products", methods=["GET"])
-def get_products():
+def get_products_by_category():
     category=request.args.get("category")
     if category:
         filtered=[item for item in products if item["category"]==category]
